@@ -1,0 +1,1 @@
+include ':app', ':quickblox-android-sdk-location-2.4'

@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.example.alejandrofernandez.actividad6johnyjueves"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.google.android.gms:play-services-ads:8.4.0'
+    compile 'com.google.android.gms:play-services-identity:8.4.0'
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/quickblox-android-sdk-videochat-webrtc-2.4.jar')
+    compile files('libs/quickblox-android-sdk-messages-2.4.jar')
+    compile files('libs/quickblox-android-sdk-customobjects-2.4.jar')
+    compile files('libs/quickblox-android-sdk-core-2.4.jar')
+    compile files('libs/quickblox-android-sdk-content-2.4.jar')
+    compile files('libs/quickblox-android-sdk-chat-2.4.jar')
+    compile project(':quickblox-android-sdk-location-2.4')
+}
